@@ -1,0 +1,16 @@
+<title>나만의 글쓰기</title>
+
+<h1>나만의 글쓰기</h1>
+
+<form action="{% url 'blog:create'  %}" method="blog">
+     {% csrf_token %}
+    <h2>제목: </h2>
+    <input type="text" name="title">
+    <br>
+    <br>
+    <h2>본문: </h2>
+    <textarea cols=40 rows= 20 name="body"></textarea>
+    <br>
+    <br>
+    <input class="btn btn-dark" type="submit" value="글 올리기">
+</form>

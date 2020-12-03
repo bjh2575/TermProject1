@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+     <title>나의 메모장</title>
+  <style>
+     h1{
+         font-size: 80px;
+         text-align: center;
+         border-bottom: 1px solid gray ;
+         margin: 0;
+     }
+     h2{
+         border: 3px solid black;
+         text-align: center;
+         width: 250px;
+         margin-bottom: 0;
+     }
+     p{
+         border: 3px solid black;
+         width: 250px;
+         text-align: center;
+
+         margin: 0;
+     }
+     li{
+         font-size: 30px;
+         text-align: center;
+
+         color : blue;
+     }
+     div{
+         font-size:17px;
+     }
+  </style>
+ </head>
+ <body>
+    <h1>나만의 공간</h1>
+    {% for blog in blogs.all %}
+    <h2>{{ blog.title }}<div>({{ blog.pub_date }})</div></h2>
+
+
+                    <p>{{ blog.body }}</p>
+        {% endfor %}
+
+    <li><a href="/blog/new ">글쓰기</a> </li>
+
+
+
+
+
+
+
+
+ </body>
+</html>
